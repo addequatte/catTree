@@ -45,8 +45,6 @@ function drowTree($items)
  */
 function tree($sortResult, $parent_id = 0)
 {
-    if (!$sortResult[$parent_id])
-        return;
     foreach ($sortResult[$parent_id] as $item) {
         if (array_key_exists($item['id'], $sortResult)) {
             $item['items'] = tree($sortResult, $item['id']);
